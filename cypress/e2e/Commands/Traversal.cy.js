@@ -32,4 +32,9 @@ describe('Traversal', () => {
     it('To get descendant DOM elements of the selector,use the .find() command', () => {
         cy.get('.traversal-pagination').find('li').find('a').should('have.length','7')
     });
+
+    it('To get the first DOM elements,use the .first() command', () => {
+        cy.get('.traversal-table td')
+        .first().should('contain','1')
+    });
 });
