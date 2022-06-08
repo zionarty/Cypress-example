@@ -37,4 +37,20 @@ describe('Traversal', () => {
         cy.get('.traversal-table td')
         .first().should('contain','1')
     });
+
+    it('To get the last DOM element within elements,use the .last() command', () => {
+        cy.get('.traversal-buttons .btn') //div -> btn
+            .last().should('contain','Submit')
+    });
+
+    it('To get the next sibling DOM element within elements,use the .next() command', () => {
+        cy.get('.traversal-ul')
+        .contains('apples').next().should('contain','oranges')
+    });
+
+    it('To get all of the next sibling DOM elements within elements,use the .nextAll() command', () => {
+        cy.get('.traversal-next-all')
+            .contains('oranges')
+            .nextAll().should('have.length', 3)
+    });
 });
