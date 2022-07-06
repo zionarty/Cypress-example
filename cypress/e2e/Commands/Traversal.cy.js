@@ -53,4 +53,18 @@ describe('Traversal', () => {
             .contains('oranges')
             .nextAll().should('have.length', 3)
     });
+
+    it('To get all of the next sibling DOM elements within elements until another elements,use the .nextUntil() commands', () => {
+        cy.get('#veggies')
+        .nextUntil('#nuts').should('have.length',3)
+    });
+
+    it('To remove DOM element(s) from the set of elements,use the .not() command', () => {
+        cy.get('.traversal-disable .btn')
+        .not('[disabled]').should('not.contain','Disable')
+    });
+
+    it('', () => {
+        
+    });
 });
