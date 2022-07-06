@@ -65,6 +65,6 @@ describe('Traversal', () => {
     });
 
     it('', () => {
-        
+        //https://example.cypress.io/commands/traversal
     });
 });
